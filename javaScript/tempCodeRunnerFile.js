@@ -1,1 +1,2 @@
-selector
+
+    if(i==0){
