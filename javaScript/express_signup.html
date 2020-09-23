@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign_up</title>
+    <link rel="stylesheet" href="express_styles&js/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body id="body">
+   
+    <form class="modal-content" action="/express_signupAction">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p class="label">Please fill in this form to create an account.</p>
+          <hr>
+          <label class="label" for=""><b>First Name</b></label>
+          <input type="text" placeholder="Enter First Name.." name="fname" required>
+    
+          <label class="label" for=""><b>Last Name</b></label>
+          <input  type="text" placeholder="Enter Last Name.." name="lname" required>
+    
+          <label class="label" for=""><b>Mobile </b></label><br>
+          <input class="input" type="number" placeholder="Mobile number.." name="phone" required>
+          
+    
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+      
+
+
+      <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("#body").fadeOut(4000);
+          });
+        });
+        </script>
+</body>
+</html>
