@@ -23,7 +23,7 @@ input[type=text], input[type=password] {
     border: transparent;
 }
 .label{
-    color:rgb(34, 27, 27);
+    color:rgb(111, 83, 236);
 }
 
 /* Add a background color when the inputs get focus */
