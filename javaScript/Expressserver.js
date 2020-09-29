@@ -1,18 +1,30 @@
 const express=require('express')
-const { request } = require('http')
+const bodyparser=require('body-parser')
 const path=require('path')
+const { request } = require('http')
 const app=express()
 
-app.get('/',(request,response)=>{
-    response.send('home')
-})
+app.use(bodyparser.urlencoded({
+    extended:true
+}))
 
-app.get('/signup',(request,response)=>{
+
+app.get('/',(request,response)=>{
     response.sendFile(path.join(__dirname,'express_signup.html'))
 })
 
 app.post('/express_signup',(request,response)=>{
-    response.send('accound created')
+
+   var firstname=request.body.fname
+   var lastname =request.body.lname
+   var number =request.body.phone
+   console.log(firstname)
+   console.log(lastname)
+   console.log(number)
+   // response.send("<h2>"+firstname+"</h2>")
+  //  response.send("<h3>"+lastname+"</h3>")
+    response.send("<h2>"+number+"<br>"+firstname+"<br>"+lastname+"</h2>")
+
 })
 
 
